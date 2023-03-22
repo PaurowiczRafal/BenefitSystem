@@ -450,6 +450,8 @@ body {
   }
   .home-page_cards {
     align-items: stretch;
+    margin-left: 15em;
+    margin-right: 15em;
     flex-direction: row;
   }
   .home-page_cards-box {
