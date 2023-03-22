@@ -131,19 +131,16 @@ body {
 @media (min-width: 992px) {
 	.home-page {
 		&_cards {
-      display: flex;
-      flex-flow: row wrap;
-      padding: 10px;
-      // position: relative;
-      // display: flex;
-			// margin-top: 18em;
-			// margin-left: 15em;
-			// margin-right: 15em;
-			// flex-direction: row;
-      &-box{
-        flex: 1;
-        width: 33%;
-      }
+			position: relative;
+			display: flex;
+			margin-top: 18em;
+			margin-left: 15em;
+			margin-right: 15em;
+			flex-direction: row;
+			&-box {
+				flex: 1;
+				width: 33%;
+			}
 		}
 	}
 }
