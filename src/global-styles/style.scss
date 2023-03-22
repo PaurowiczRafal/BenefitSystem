@@ -1,0 +1,149 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import 'styles/normalize.scss';
+@import 'styles/root.scss';
+@import 'styles/fonts.scss';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	// height: 100vh;
+	font-family: 'Raleway', sans-serif;
+	color: var(--color-black);
+	background-color: --color-white;
+}
+.test {
+	width: 50px;
+	height: 50px;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+	background-color: #fff;
+}
+.home-page {
+	&_cards {
+		position: absolute;
+		display: flex;
+		margin: 2.1em 1.6em;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1.6em;
+
+		&-box {
+			border-radius: 12px;
+			&--one {
+				background-color: var(--color-light-green);
+				box-shadow: 0 0 23.5em rgba(0, 0, 0, 0.06);
+			}
+			&--two {
+				background-color: var(--color-light-blue);
+				box-shadow: 0 0 23.5em rgba(0, 0, 0, 0.06);
+			}
+			&--three {
+				background-color: var(--color-light-yellow);
+				box-shadow: 0 0 23.5em rgba(0, 0, 0, 0.06);
+			}
+
+			&-icon {
+				position: absolute;
+				margin: 2.4em 1.6em;
+				width: 4.8em;
+				height: 4.8em;
+				border-radius: 50%;
+				&--one {
+					background-color: var(--color-green);
+				}
+				&--two {
+					background-color: var(--color-blue);
+				}
+				&--three {
+					background-color: var(--color-yellow);
+				}
+				img {
+					position: absolute;
+					top: 1.2em;
+					left: 1.2em;
+				}
+			}
+			&-info {
+				display: flex;
+				margin: 8.8em 1.6em 2.4em;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 1.6em;
+				&-text {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 1.6em;
+					&-title {
+						font-weight: 700;
+						font-size: 2.6rem;
+						line-height: 1.2em;
+					}
+					&-information {
+						font-weight: 400;
+						font-size: 1.4rem;
+						line-height: 1.4em;
+						color: var(--color-dark);
+					}
+				}
+				&-btn-learn-more {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 1.4em 1.9em 1.5em 2.4em;
+					gap: 0.6em;
+					border-radius: 200px;
+					border: none;
+					background-color: var(--color-white);
+					cursor: pointer;
+					&:hover {
+						a {
+							color: #001aff;
+						}
+					}
+					a {
+						text-decoration: none;
+						font-weight: 400;
+						font-size: 1.2rem;
+						line-height: 1.5em;
+						color: var(--color-black);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.home-page {
+		&_cards {
+      display: flex;
+      flex-flow: row wrap;
+      padding: 10px;
+      // position: relative;
+      // display: flex;
+			// margin-top: 18em;
+			// margin-left: 15em;
+			// margin-right: 15em;
+			// flex-direction: row;
+      &-box{
+        flex: 1;
+        width: 33%;
+      }
+		}
+	}
+}
